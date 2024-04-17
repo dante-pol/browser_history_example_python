@@ -5,13 +5,27 @@ class Node:
 
 class Stack:
     def __init__(self):
-        pass
+        self.__top = None
+        self.__size = 0
 
-    def add(self, item: any):
-        pass
+    def push(self, item: any):
+        new_node = Node(item)
+        new_node.__prev = self.__top
+        self.__top = new_node
 
-    def last_del(self):
-        pass
+        self.__size += 1
 
-    def get_last(self):
-        pass
+    def pop(self):
+        if self.__size == 0:
+            return None
+
+        data = self.__top.__data
+        self.__top = self.__top.__prev
+        self.__size -= 1
+
+        return data
+
+    def peek(self):
+        return self.__top.__data if self.__size != 0 else None
+
+
