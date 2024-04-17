@@ -28,4 +28,13 @@ class Stack:
     def peek(self):
         return self.__top.__data if self.__size != 0 else None
 
+    def is_empty(self) -> bool:
+        """
+        Проверка коллекции на пустоту
+        :return: False - если коллекция пуста
+                 True - если коллекция имеет элементы
+        """
+        
+        return self.__top is not None
+
 
