@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, data):
         self.__data = data
-        self.__prev = None
+        self.prev = None
 
 
 class Stack:
@@ -9,15 +9,16 @@ class Stack:
         self.__top = None
         self.__size = 0
 
-    def push(self):
+    def push(self,item):
         pass
 
     def pop(self):
         pass
 
     def peek(self):
-        pass
+        return self.__top != None
 
     def is_empty(self):
         return self.__top == None
+
 
