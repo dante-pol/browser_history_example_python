@@ -19,4 +19,5 @@ class Stack:
         pass
 
     def is_empty(self):
-        pass
+        return self.__top == None
+
