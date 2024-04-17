@@ -24,7 +24,7 @@ class Stack:
 
     def pop(self) -> None or any:
         """
-        Удаляет и возвращает последний элемент в коллекции
+        Удаляет и возвращает последний элемент из коллекции
         :return: Элемент или None
         """
 
@@ -39,7 +39,7 @@ class Stack:
 
     def peek(self) -> None or any:
         """
-        Возвращает последний добавленный элемент в коллекцию
+        Возвращает последний добавленный элемент из коллекции
         :return: Элемент или None
         """
         return self.__top.__data if self.__size != 0 else None
@@ -50,7 +50,7 @@ class Stack:
         :return: False - если коллекция пуста
                  True - если коллекция имеет элементы
         """
-        
+
         return self.__top is not None
 
 
