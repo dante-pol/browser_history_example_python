@@ -25,10 +25,14 @@ class StackPushTestCase(unittest.TestCase):
         res = self.stack.peek()
         self.assertEquals(res, '-1121423sfjisjdfsidfuygadsad')
 
-    def test_push_data_type_int(self):
+    def test_push_data_type_float(self):
         self.stack.push(0.6)
         res = self.stack.peek()
         self.assertEquals(res, 0.6)
+
+class StackIsEmptyTestCase(unittest.TestCase):
+    def setUp(self):
+        self.stack = Stack()
 
 if __name__ == '__main__':
     unittest.main()
