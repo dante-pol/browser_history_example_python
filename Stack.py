@@ -10,7 +10,10 @@ class Stack:
         self.__size = 0
 
     def push(self,item):
-        pass
+        node = Node(item)
+        node.prev = self.__top
+        self.__top = node
+        self.__size += 1
 
     def pop(self):
         pass
@@ -22,3 +25,7 @@ class Stack:
         return self.__top == None
 
 
+s1 = Stack()
+s1.push(1)
+print(s1.is_empty())
+print(s1.peek())
