@@ -33,6 +33,18 @@ class StackPushTestCase(unittest.TestCase):
 class StackIsEmptyTestCase(unittest.TestCase):
     def setUp(self):
         self.stack = Stack()
+    def test_is_empty_true(self):
+        res = self.stack.is_empty()
+        self.assertEquals(res,True)
+    def test_is_empty_false(self):
+        self.stack.push(121124)
+        res = self.stack.is_empty()
+        self.assertEquals(res, False)
+    def test_is_empty_false(self):
+        self.stack.push('fuasfsjafasfsafsaf')
+        res = self.stack.is_empty()
+        self.assertEquals(res, False)
+
 
 if __name__ == '__main__':
     unittest.main()
