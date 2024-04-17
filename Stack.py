@@ -5,7 +5,8 @@ class Node:
 
 class Stack:
     def __init__(self):
-        pass
+        self.__top = None
+        self.__size = 0
 
     def push(self):
         pass
