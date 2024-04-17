@@ -1,6 +1,6 @@
 class Node:
     def __init__(self, data):
-        self.__data = data
+        self.data = data
         self.prev = None
 
 
@@ -19,7 +19,10 @@ class Stack:
         pass
 
     def peek(self):
-        return self.__top != None
+        if self.__size != 0:
+            return self.__top.data
+        else:
+            return
 
     def is_empty(self):
         return self.__top == None
