@@ -49,5 +49,3 @@ class Stack:
         :return:True если элемента в классе нет,False если есть
         """
         return self.__top == None
-
-
