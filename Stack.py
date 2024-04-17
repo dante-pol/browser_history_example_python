@@ -1,6 +1,7 @@
 class Node:
-    def __init__(self):
-        pass
+    def __init__(self, data):
+        self.__data = data
+        self.__prev = None
 
 
 class Stack:
