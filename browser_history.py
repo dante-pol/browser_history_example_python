@@ -1,5 +1,13 @@
 import Stack as s
+import datetime
+
+
+
 class BrowserHistory:
+    class HistoryItem:
+        def __init__(self, url: str, datetime: datetime):
+            self.url = url
+            self.datetime = datetime
 
     def __init__(self):
         """
