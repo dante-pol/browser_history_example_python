@@ -1,13 +1,13 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.prev = None
-
 
 class Stack:
     def __init__(self):
         self.__top = None
         self.__size = 0
+
+    class Node:
+        def __init__(self, data):
+            self.data = data
+            self.prev = None
 
     def push(self, item: any) -> None:
         """
@@ -15,7 +15,7 @@ class Stack:
         :param item: объект любого типа данных
         :return: None
         """
-        node = Node(item)
+        node = Stack.Node(item)
         node.prev = self.__top
         self.__top = node
         self.__size += 1
