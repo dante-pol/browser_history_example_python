@@ -16,7 +16,13 @@ class Stack:
         self.__size += 1
 
     def pop(self):
-        pass
+        if self.__size == 0: return None
+
+        data = self.__top.data
+        self.__top = self.__top.prev
+        self.__size -= 1
+
+        return data
 
     def peek(self):
         if self.__size != 0:
@@ -28,7 +34,3 @@ class Stack:
         return self.__top == None
 
 
-s1 = Stack()
-s1.push(1)
-print(s1.is_empty())
-print(s1.peek())
